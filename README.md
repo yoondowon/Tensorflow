@@ -54,12 +54,39 @@ cd 이후에 입력하는 설치 경로는 위에서 언급한 location 뒤에 �
 sess 입력 후에 나타나는 메시지는 무시하시고 진행하면 됩니다.
 ```
 Activate tensorflow35
-cd c:\users\nife7\anaconda3\lib\site-packages
+cd c:\users\user\anaconda3\lib\site-packages
 python
 >>> import tensorflow as tf
 >>> hello = tf.constant(“Hello World!”)
 >>> sess = tf.Session()
 >>>	print(sess.run(hello))
+```
+
+### 2.6 Path 설정
+매번 가상환경에서 cd로 경로를 입력하기 어렵기 때문에 path 설정을 해줍니다.
+path 설정 후에는 위의 코드에서 cd 코드는 입력하지 않아도 됩니다. 
+ * 내컴퓨터 우클릭 > 고급 시스템 설정 > 환경변수 > 시스템변수에 있는 변수 중 Path 클릭 후 편집 > 새로만들기 > 경로 입력 후 확인
+
+## 3. Pycharm에서 Tensorflow 사용하기
+### 3.1 Pycharm 설치
+ * 사이트: https://www.jetbrains.com/pycharm/download/#section=windows
+ * Coummunity Version으로 다운로드
+ 
+### 3.2 Pycharm 설정
+ * New Project 클릭 후 Interpreter 우측의 톱니바퀴 아이콘을 클릭한 후 Add Local를 클릭합니다.
+ * c:\users\...\anaconda3\envs 로 이동하면 앞서 구성한 tensorflow35 폴더가 보입니다.
+ * tensorflow35 폴더내에있는 python.exe를 클릭 후 OK를 클릭합니다.
+ * create 클릭합니다.
+ * Pycharm에서 File > Settings > Project:your_project_name > Project Interpreter로 이동합니다.
+ * 우측에있는 + 아이콘을 클릭한 후 tensorflow를 검색하여 설치합니다.
+ * 위와 동일한 코드를 실행하여 설정이 완료되었는지 확인합니다.
+ 
+```
+import tensorflow as tf
+
+hello = tf.constant(“Hello World!”)
+sess = tf.Session()
+print(sess.run(hello))
 ```
 
 

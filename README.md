@@ -21,11 +21,11 @@
  * Download 버튼 클릭 > 로그인(가입이 필요함) > 설문조사 후 넘어감 > 라이선스 동의 클릭 > 여러 버전 중 “Download cuDNN v5.1 (Jan 20, 2017), for CUDA 8.0” 클릭 > 운영체제에 맞는 Library 다운로드
  * 다운로드 한 압축 파일을 앞서서 설치한 CUDA 설치경로에 있는 파일에 덮어쓰기 해야 합니다.
  * CUDA 설치 경로: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0
- * 위 설치 경로로 이동해서 파일들을 복사/붙여넣기 진행
+ * 위 설치 경로로 이동해서 파일들을 붙여넣기 합니다.
 
 ## 2.	Tensorflow 설치 및 테스트
 ### 2.1 가상환경 생성
-cmd 접속 후 아래와 같이 입력
+cmd 접속 후 아래와 같이 입력합니다.
 ```
 conda create -n tensorflow35 python=3.5 anaconda
 ```
@@ -53,7 +53,7 @@ pip show tensorflow
 ```
 
 ### 2.5 Tensorflow Test
-설치가 잘 진행되었다면, 아래와 같이 입력하여 "Hello World"가 나타나면 제대로 진행된 것 입니다. 
+아래와 같이 입력하여 "Hello World"가 나타나면 제대로 진행된 것 입니다. 
 
 cd 이후에 입력하는 설치 경로는 위에서 언급한 location 뒤에 나타나는 설치 경로를 입력해야 합니다.
 

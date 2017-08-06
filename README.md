@@ -21,28 +21,46 @@
  * CUDA 설치 경로: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0
  * 위 설치 경로로 이동해서 파일들을 복사/붙여넣기 진행
 
------------
-## 2.	아나콘다에 가상환경 설정
-### 2.1 cmd 접속 후 가상환경 구축 명령어 입력
+## 2.	Tensorflow 설치 및 테스트
+### 2.1 가상환경 생성
+cmd 접속 후 아래와 같이 입력
 ```
 conda create -n tensorflow35 python=3.5 anaconda
 ```
-B.	설치가 종료되면 아래와 같이 명령어 입력(GPU 버전은 CUDA 설치했을 때만)
-i.	pip install tensorflow-gpu
-ii.	pip install tensorflow
-C.	설치 후에 아래 명령어를 입력했을 때 목록에 있으면 설치가 제대로 된 것 입니다. 
-i.	pip freeze
-D.	아래 명령어를 쳐서 현재 tensorflow가 설치된 위치 확인
-i.	pip show tensorflow-gpu
-ii.	pip show tensorflow
-E.	pip show를 했을 때 나온 내용 중 “Location:” 뒤에 나타난 설치 경로 확인
-i.	이후에 tensorflow 가상환경 진입 후에 해당 위치로 이동해야 합니다.
-F.	설치가 잘 진행되었다면, 아래와 같이 명령어 입력 (cd 이후에 입력하는 설치 경로는 위에서 언급한 location 뒤에 나타나는 설치 경로를 입력해야 합니다.)
-i.	Activate tensorflow35
-ii.	cd c:\users\nife7\anaconda3\lib\site-packages
-iii.	python
-iv.	import tensorflow as tf
-v.	hello = tf.constant(“Hello World!”)
-vi.	sess = tf.Session()
-vii.	print(sess.run(hello))
+
+### 2.2 Tensorflow install (GPU 버전은 CUDA 설치했을 때만)
+```
+pip install tensorflow-gpu
+pip install tensorflow
+```
+
+### 2.3 설치 확인
+설치 후에 아래 명령어를 입력했을 때 목록에 있으면 설치가 제대로 된 것 입니다. 
+```
+pip freeze
+```
+
+### 2.4 Tensorflow 설치 위치 확인
+아래 명령어를 쳐서 현재 tensorflow가 설치된 위치 확인
+Location: 뒤에 나타나는 경로가 설치된 경로입니다. (이후에 tensorflow 가상환경 진입 후에 해당 위치로 이동해야 합니다.)
+```
+pip show tensorflow-gpu
+pip show tensorflow
+```
+
+### 2.5 Tensorflow Test
+설치가 잘 진행되었다면, 아래와 같이 입력하여 "Hello World"가 나타나면 제대로 진행된 것 입니다. 
+cd 이후에 입력하는 설치 경로는 위에서 언급한 location 뒤에 나타나는 설치 경로를 입력해야 합니다.
+sess 입력 후에 나타나는 메시지는 무시하시고 진행하면 됩니다.
+```
+Activate tensorflow35
+cd c:\users\nife7\anaconda3\lib\site-packages
+python
+>>> import tensorflow as tf
+>>> hello = tf.constant(“Hello World!”)
+>>> sess = tf.Session()
+>>>	print(sess.run(hello))
+```
+
+
 

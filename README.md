@@ -14,7 +14,7 @@
  * 사이트: https://developer.nvidia.com/cuda-downloads
  * 사이트 접속 후 운영체제 선택 > 운영체제 버전 선택 > Installer Type “exe(local)”로 선택 > Base Installer 다운로드
  * 예) Window 선택 > 10 선택 > “exe(local)” 선택 > Base Installer Download
- * 설지 진행: 별다른 설정 없이 설치하면 됩니다.
+ * 설 진행: 별다른 설정 없이 설치하면 됩니다.
 
 #### 1.2.2 cuDNN 설치
  * 사이트: https://developer.nvidia.com/cudnn
